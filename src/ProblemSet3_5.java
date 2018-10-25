@@ -322,7 +322,7 @@ public class ProblemSet3_5 {
 	public void leapYears(int count) {
 		int year = 2016;
 		if (count <= 0) {
-			System.out.println("I don't know how to compute the next " + count + " leap years...");
+			System.out.println("Please enter a valid count for me to calculate.");
 		}
 		if (count == 1) {
 			System.out.println("The next leap year is " + year + ".");
