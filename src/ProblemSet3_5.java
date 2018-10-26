@@ -28,8 +28,8 @@ public class ProblemSet3_5 {
 		//ps.testPrimes();
 		//ps.testLeapYears();
 		//ps.testPalindromicNumbers();
-		ps.testFibonacci();
-		//ps.testMultiples();
+		//ps.testFibonacci();
+		ps.testMultiples();
 	}
 	
 	/*
@@ -320,9 +320,9 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void leapYears(int count) {
-		int year = 2016;
+		int year = 2020;
 		if (count <= 0) {
-			System.out.println("Please enter a valid count for me to calculate.");
+			System.out.println("I don't know how to compute the next" + count + "leap years...");
 		}
 		if (count == 1) {
 			System.out.println("The next leap year is " + year + ".");
@@ -357,7 +357,8 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void palindromicNumbers(int number) {
-		
+		long n = number;
+		int length = (int)(Math.log10(n)+1);
 	}
 	
 	/**
@@ -373,9 +374,9 @@ public class ProblemSet3_5 {
 	
 	public void fibonacci(int n) {
 		int previous = n%10;
-		int one = 0;
-		int two = 1;
-		int num = 0;
+		long one = 0;
+		long two = 1;
+		long num = 0;
 		for(int i = 1; i < n; i++) {
 			num = one + two;
 			one = two;
@@ -408,6 +409,12 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void multiples(int x, int y, int limit) {
-		
+		long sum = 0;
+			for(int i = 1; i < limit; i++) {
+				if(i%y == 0 || i%x ==0) {
+					sum=sum + i;
+					}
+			}
+			System.out.println("The sum of all multiples of " + x + " and " + y + " less than " + limit + " is " + (sum) + ".");
 	}
 }
