@@ -357,8 +357,21 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void palindromicNumbers(int number) {
-		long n = number;
-		int length = (int)(Math.log10(n)+1);
+		int check = 0;
+		int sum = 0; 
+		int num = number;
+		while (number > 0) {
+			check = number % 10;    
+			sum = (sum * 10) + check;    
+			number = number / 10;
+			}    
+		  
+			if (num == sum) {  
+			  System.out.println(num + " is a palindromic number.");   
+			}
+			else {
+			  System.out.println(num + " is not a palindromic number.");  
+			}
 	}
 	
 	/**
